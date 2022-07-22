@@ -15,13 +15,13 @@ namespace RazorPagesMovie.Models
                     throw new ArgumentNullException("Null RazorPagesMovieContext");
                 }
 
-                // Look for any movies.
-               // if (context.Movie.Any())
-               // {
-                 //  return;   // DB has been seeded
-              //  }
+                 //  Look for any movies.
+                 if (context.Movie.Any())
+                 {
+                    return;   // DB has been seeded
+                 }
 
-                context.Movie.AddRange(
+                    context.Movie.AddRange(
                     new Movie
                     {
                         Title = "When Harry Met Sally",
